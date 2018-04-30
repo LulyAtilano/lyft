@@ -1,24 +1,25 @@
 body {
     background-color: green;
+    border: none;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-header {
+header > section#main {
     background-image: url("./../assets/images/hero.gif");
     background-size: cover;
-    display: absolute;
-    height: 750px;
+    height: 650px;
     width: 100%;
 }
 
 /* ----- HEADER -----*/ 
-header > section {
-    border: 1px solid red;
+header > section:first-child {
+    background: linear-gradient(#76278F, #2B1E66);
     box-sizing: content-box;
     display: inline-flex;
+    float: right;
     text-align: center;
     padding: 2ex 0 2ex 0;
     position: fixed;
@@ -26,20 +27,23 @@ header > section {
     width: 100%;
 }
 
-header > section > h1 > img {
+header > section:first-child > h1 > img {
     height: 45px;
     padding: 0 28em 0 6em;
-    widows: 60px;
+    width: 60px;
 }
 
-header > section > nav > ul > li {
-    border: 1px solid orange;
+header > section > nav > ul > li {;
     color: white;
     display: inline;
     font-size: 1em;
     padding-right: 2em;
     margin-top: 5em;
     text-decoration: none;
+}
+
+header > section > nav > ul > li:hover {
+    color: #ff00bf;
 }
 
 header > section > nav > ul > li:last-child {
@@ -49,36 +53,28 @@ header > section > nav > ul > li:last-child {
     padding: .8em 1.5em .8em 1.5em;
 }
 
-/* ----- SECTION MAIN ----- */
-#main {
-    background-color: transparent;
-    display: relative;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    text-align: center;
+header > section > nav > ul > li:last-child:hover {
+    border: 1px solid #ff00bf;
 }
 
-#main > img {
-    height: 100%;
-    width: 100%;
-}
-
-#main > aside {
+/* ----- ASIDE ----- */
+header > section#main > aside {
     background-color: white;
-    float: right;
+    border-right: 5px solid white;
+    box-sizing: border-box;
+    margin: 8em 0 0 50.5em;
     padding: 2.2em 2.5em 2.2em 2.5em;
-    margin-right: 0;
     width: 40%;
 }
 
-#main > aside > h2 {
+header > #main > aside > h2 {
     color: #352384;
     font-size: 2.5em;
     font-weight: 700;
     margin: 0;
 }
 
-#main > aside > h4 {
+header > #main > aside > h4 {
     color: #352384;
     font-weight: lighter;
     letter-spacing: .2em;
@@ -86,11 +82,11 @@ header > section > nav > ul > li:last-child {
     padding-top: .5em;
 }
 
-#main > aside > form > input {
+header > #main > aside > form > input {
     border: none;
 }
 
-#main > aside > form > input#mobile-number {
+header > #main > aside > form > input#mobile-number {
     border-bottom: 1px solid #352384;
     color: #728099;
     font-size: .9em;
@@ -99,7 +95,7 @@ header > section > nav > ul > li:last-child {
     width: 100%;
 }
 
-#main > aside > form > button#driver {
+header > #main > aside > form > button#driver {
     justify-content: center;
     background-color: #ff00bf;
     border: none;
@@ -113,7 +109,7 @@ header > section > nav > ul > li:last-child {
     width: 47%;
 }
 
-#main > aside > form > button#client {
+header > #main > aside > form > button#client {
     justify-content: center;
     background-color: white;
     border: none;
@@ -127,7 +123,7 @@ header > section > nav > ul > li:last-child {
     width: 47%;
 }
 
-#main > aside > span {
+header > #main > aside > span {
     color: #728099;
     font-size: 70%;
     padding: 1em 0 1em 0;
@@ -194,35 +190,116 @@ header > section > nav > ul > li:last-child {
 }
 
 /* ----- SECTION FOOTER  ----- */
-footer {
+footer > * {
     background: #333447;
-    box-sizing: content-box;
+    box-sizing: border-box;
     color: white;
     display: inline-flex;
+    position: absolute;
     width: 100%;
 }
 
+footer > #info {
+    position: absolute;
+    width: 75%;    
+}
+
 footer > #info > nav {
-    border: 1px solid red;
     display: inline-flex;
     padding-left: 1em;
-    width: 20em;
+    width: 15em;
+}
+
+footer > #info > nav:first-child {
+    padding-left: 15em;
 }
 
 footer #info nav ul {
-    border: 1px solid green;
     padding: 1.5em;
     width: 100%;
 }
 
+footer #info nav > * {
+    text-decoration: none;
+}
+
 footer > #info > nav > ul > li, h3 {
-    border: 1px solid blueviolet;
     padding: .8em 0 .8em 0;
     text-align: center;
+    text-decoration: none;
+}
+
+footer > #info > nav > ul > li:hover, h3:hover {
+    color: #ff00bf;
+    text-decoration: underline;
+}
+
+footer > #info > nav > ul > li {
+    font-weight: lighter;
+}
+
+#apps-store {
+    box-sizing: border-box;
+    display: inline-flex;
+    float: right;
+    position: relative;
+    width: 25%;
 }
 
 footer > #apps-store > nav > img {
     display: block;
     height: 3em;
-    padding: 2em 0 2em 0;
+    padding: 1.5em 0 1.5em 1.5em;
+}
+
+footer > #apps-store > nav > img:first-child {
+    display: block;
+    height: 3em;
+    padding-top: 4.5em;
+}
+
+footer > #apps-store > nav > img:last-child {
+    padding-bottom: 2.8em;
+}
+
+#social-media {
+    box-sizing: border-box;
+    display: inline;
+    margin-top: 21.5em;
+    padding: 2em 0 2em 3em;
+    text-align: center;
+    width: 100%;
+}
+
+.icon {
+    border: 1px solid white;
+    border-radius: 100%;
+    color: white;
+    display: inline-block;
+    fill: currentColor;
+    height: 1.5em;
+    margin: 0 2.5em 0 0;
+    padding: .5em;
+    stroke: currentColor;
+    width: 1.5em;
+}
+
+#terms {
+    border: 0;
+    box-sizing: border-box;
+    display: inline;
+    margin-top: 27.5em; 
+    padding: 2.5em 0 1.5em 0;
+    text-align: center;
+    width: 100%;
+}
+ 
+#terms > p, span {
+    display: inline;
+    padding: .5em 1.5em 0 1em;
+    align-content: center;
+}
+
+#terms > span:hover {
+    color: #ff00bf;
 }
