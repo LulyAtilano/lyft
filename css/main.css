@@ -236,6 +236,7 @@ footer > #info > nav > ul > li:hover, h3:hover {
 
 footer > #info > nav > ul > li {
     font-weight: lighter;
+    display: block;
 }
 
 #apps-store {
